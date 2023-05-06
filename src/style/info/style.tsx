@@ -1,6 +1,39 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
+export const info = StyleSheet.create({
+    titlemain:{
+        fontFamily: 'General Sans',
+        fontWeight: '700',
+        fontSize: 20,
+
+        letterSpacing: 0.02,
+
+        color: '#425884'
+    },
+    subtitlemain:{
+        marginTop: 10,
+
+        fontFamily: 'General Sans',
+        fontWeight: '400',
+        fontSize: 12,
+
+        letterSpacing: 0.02,
+
+        color: '#7B6F72'
+    },
+    margintop:{
+        marginTop: 10
+    },
+    marginright:{
+        marginRight: 30
+    },
+    imgnext:{
+        width: 100,
+        height: 100,
+    }
+})
+
 export const inputS = StyleSheet.create({
     container:{
         flexDirection: 'row',
@@ -54,5 +87,5 @@ export const inputS = StyleSheet.create({
         fontSize: 12,
 
         color: '#FFFFFF'
-    }
+    },
 })

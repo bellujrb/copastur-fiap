@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { register } from '../../../style/auth/style';
 import { Input } from '../../../components/global/input';
-import { global, input } from '../../../style/global/style';
+import { global } from '../../../style/global/style';
 import Button from '../../../components/global/button';
 import { loginbutton } from '../../../constants/string';
 import { RootStackParams } from '../../../navigation';

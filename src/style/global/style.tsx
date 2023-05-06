@@ -12,7 +12,7 @@ export const global = StyleSheet.create({
 
 export const input = StyleSheet.create({
     spaceinputs:{
-        margin: 10
+        margin: 4
     },
     textinput:{
         fontFamily: 'Poppins',

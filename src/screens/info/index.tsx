@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, Text, TouchableOpacity, SafeAreaView, Image } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { header } from '../../style/header/style';
 import { global } from '../../style/global/style';
 import { Input } from '../../components/global/input';
 import { InputSpecial } from '../../components/info/inputspecial';
+import { info } from '../../style/info/style';
+import buttomimg from '../../assets/images/button1.png';
 
 export default function Info(){
     
@@ -28,35 +30,20 @@ export default function Info(){
             </View>
             {/* Header End */}
 
+            {/* Title Main */}
+
             <View style={{
                 justifyContent: 'center',
                 alignItems: 'center',
             }}>
 
-                <Text style={{
-                    fontFamily: 'General Sans',
-                    fontWeight: '700',
-                    fontSize: 20,
+                <Text style={info.titlemain}>Quem sou eu e o que quero?</Text>
+                <Text style={info.subtitlemain}>Defina suas preferencias e necessidades</Text>
+                <View style={info.margintop}/>
 
-                    letterSpacing: 0.02,
+            {/* Title Main End */}
 
-                    color: '#425884'
-                }}>Quem sou eu e o que quero?</Text>
-                <Text style={{
-                    marginTop: 10,
-
-                    fontFamily: 'General Sans',
-                    fontWeight: '400',
-                    fontSize: 12,
-
-                    letterSpacing: 0.02,
-
-                    color: '#7B6F72'
-                }}>Defina suas preferencias e necessidades</Text>
-                <View style={{
-                    marginTop: 10,
-                }}/>
-
+                { /* Input */ }
                 <Input name='Como se identifica?' 
                     placeholder='Selecione seu genero'
                 />
@@ -64,10 +51,10 @@ export default function Info(){
                 <Input name='Qual sua idade?' 
                     placeholder='Selecione sua idade'
                 />
+                { /* Input End */ }
 
-                <View style={{
-                    marginRight: 30
-                }}>
+                { /* Input Special */}
+                <View style={info.marginright}>
                     <InputSpecial name='Qual sua altura??' 
                         placeholder='Selecione sua altura'
                         type='CM'
@@ -78,6 +65,17 @@ export default function Info(){
                         type='KG'
                     />
                 </View>
+                { /* Input Special End */}
+
+                { /* Botao Next */}
+                    <TouchableOpacity style={{
+                        marginTop: 60
+                    }}>
+                        <Image source={buttomimg} style={info.imgnext}/>
+                    </TouchableOpacity>
+                { /* Botao Next End */}
+
+
             </View>
         </SafeAreaView>
     )
