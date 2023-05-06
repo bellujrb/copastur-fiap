@@ -4,6 +4,9 @@ export const global = StyleSheet.create({
     organize:{
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    row:{
+        flexDirection: 'row'
     }
 })
 

@@ -5,6 +5,7 @@ import Welcome from "../screens/welcome";
 import Auth from "../screens/auth/register";
 import Login from "../screens/auth/login";
 import Register from "../screens/auth/register";
+import Home from "../screens/home";
 
 export type RootStackParams = {
     welcome: undefined;
@@ -39,6 +40,14 @@ export default function Screens(){
                 <Stack.Screen
                     name="register"
                     component={Register}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <Stack.Screen
+                    name="home"
+                    component={Home}
                     options={{
                         headerShown: false
                     }}

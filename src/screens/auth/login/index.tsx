@@ -5,8 +5,13 @@ import { Input } from '../../../components/global/input';
 import { global, input } from '../../../style/global/style';
 import Button from '../../../components/global/button';
 import { confirmregister, loginbutton } from '../../../constants/string';
+import { RootStackParams } from '../../../navigation';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Login(){
+
+    const nav = useNavigation<StackNavigationProp<RootStackParams>>();
 
     return (
         <View>
@@ -33,7 +38,7 @@ export default function Login(){
 
                 { /* Button Register */ }
                     <Button nameButton={loginbutton} destiny={() => {
-                        alert('Cadastrado')
+                        nav.navigate('home')
                     }}/>
                 { /* End Button Register */ }
 
