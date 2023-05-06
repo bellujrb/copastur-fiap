@@ -4,7 +4,7 @@ import { register } from '../../../style/auth/style';
 import { Input } from '../../../components/global/input';
 import { global, input } from '../../../style/global/style';
 import Button from '../../../components/global/button';
-import { confirmregister, loginbutton } from '../../../constants/string';
+import { loginbutton } from '../../../constants/string';
 import { RootStackParams } from '../../../navigation';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';

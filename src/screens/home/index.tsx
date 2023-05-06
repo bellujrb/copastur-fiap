@@ -6,9 +6,14 @@ import { global } from '../../style/global/style';
 import ButtonHome from '../../components/home/button';
 import { LinearGradient } from 'expo-linear-gradient';
 import my from '../../assets/images/my.png';
+import { RootStackParams } from '../../navigation';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { useNavigation } from '@react-navigation/native';
 
 
 export default function Home(){
+
+    const nav = useNavigation<StackNavigationProp<RootStackParams>>();
 
     return (
         <View>
@@ -40,7 +45,9 @@ export default function Home(){
                 width: '55%'
             }}>
                 <Text style={homebutton.title}>Quem eu sou? O que eu quero?</Text>
-                <ButtonHome name='Definir'/>
+                <ButtonHome name='Definir' destiny={() => {
+                    nav.navigate('info1')
+                }}/>
             </View>
 
             <Image source={my} style={homebutton.img}/>
