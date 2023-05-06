@@ -33,6 +33,8 @@ export default function Home(){
         {/* Buttoes */}
         <View style={homebutton.align}>
 
+        {/* Button Definir */}
+
         <LinearGradient colors={['#92A3FD', '#9DCEFF']} style={homebutton.hbutton1}>
             <View style={{
                 width: '55%'
@@ -41,18 +43,40 @@ export default function Home(){
                 <ButtonHome name='Definir'/>
             </View>
 
-            <Image source={my} style={{
-                width: 210,
-                height: 124,
-
-                transform: [
-                    { translateX: -30 },
-                    { translateY: 6 }
-                ],
-            }}/>
+            <Image source={my} style={homebutton.img}/>
         </LinearGradient>
+
+        {/* Button Ver Todas */}
+
+        <View style={{
+            marginTop: 35,
+
+            width: 329, 
+            height: 90,
+
+            borderRadius: 22,
+            backgroundColor: '#92A3FD',
+        }}>
+
         </View>
 
+        {/* Button Ver Todas End*/}
+        
+        {/* Button Checkar */}
+        <View style={{
+            marginTop: 35,
+
+            width: 315, 
+            height: 68,
+            
+            backgroundColor: '#92A3FD'
+        }}>
+
+
+        </View>
+
+        </View>
+        {/* End Button Checkar */}
         </View>
     )
 }

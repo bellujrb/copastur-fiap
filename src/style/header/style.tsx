@@ -64,5 +64,14 @@ export const homebutton = StyleSheet.create({
             
         justifyContent: 'center',
         alignItems: 'center'
+    }, 
+    img:{
+        width: 210,
+        height: 124,
+
+        transform: [
+            { translateX: -30 },
+            { translateY: 6 }
+        ],
     }
 })
