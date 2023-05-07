@@ -7,6 +7,7 @@ import Register from "../screens/auth/register";
 import Home from "../screens/home";
 import Info from "../screens/infos/info1";
 import InfoTwo from "../screens/infos/info2";
+import Error from "../screens/error404/Error";
 
 export type RootStackParams = {
     welcome: undefined;
@@ -14,7 +15,8 @@ export type RootStackParams = {
     register: undefined;
     home: undefined;
     info1: undefined;
-    info2: undefined
+    info2: undefined;
+    error404: undefined;
 }
 
 const Stack = createStackNavigator<RootStackParams>();
@@ -67,6 +69,14 @@ export default function Screens(){
                 <Stack.Screen
                     name="info2"
                     component={InfoTwo}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <Stack.Screen
+                    name="error404"
+                    component={Error}
                     options={{
                         headerShown: false
                     }}

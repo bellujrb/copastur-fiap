@@ -8,6 +8,8 @@ import { info } from '../../../style/info/style';
 import buttomimg from '../../../assets/images/button1.png';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParams } from '../../../navigation';
+import { Input } from '../../../components/global/input';
+import Button from '../../../components/global/button';
 
 export default function InfoTwo(){
 
@@ -26,7 +28,9 @@ export default function InfoTwo(){
                 height: '20%'
             }}>
                 <View style={header.top}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => {
+                        nav.navigate('home')
+                    }}>
                             <Ionicons name="arrow-back-circle-outline" size={28} color="black" style={header.spaceicon}/>
                     </TouchableOpacity>
 
@@ -52,15 +56,37 @@ export default function InfoTwo(){
 
             {/* Title Main End */}
 
+                { /* Input */}
+
+                <View style={info.marginright}>
+                    <Input
+                        name='Qual e o estilo da sua viagem?'
+                        placeholder='Escolha lazer ou corporativo.'
+                    />
+
+                    <Input
+                        name='Quanto pretende gastar?'
+                        placeholder='Digite aproximadamente quanto pretende.'
+                    />
+
+                    <Input
+                        name='??'
+                        placeholder='???'
+                    />
+
+                    <Input
+                        name='??'
+                        placeholder='???'
+                    />
+                </View>
+                { /* Input */}
+
                 { /* Botao Next */}
                 <View style={info.organizenext}>
-                    <TouchableOpacity onPress={() => {
+                    <Button nameButton="Salvar" destiny={() => {
                         nav.navigate('home');
                         alert("Dados salvo com sucesso!")
-                    }}>
-                        <Image source={buttomimg} style={info.imgnext}/>
-                    </TouchableOpacity>
-                    <Text style={info.textnext}>Avancar</Text>
+                    }}/>
                 </View>
                 { /* Botao Next End */}
 

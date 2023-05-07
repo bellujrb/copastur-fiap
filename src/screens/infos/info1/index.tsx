@@ -29,7 +29,9 @@ export default function Info(){
                 height: '20%'
             }}>
                 <View style={header.top}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => {
+                        nav.navigate('home')
+                    }}>
                             <Ionicons name="arrow-back-circle-outline" size={28} color="black" style={header.spaceicon}/>
                     </TouchableOpacity>
 

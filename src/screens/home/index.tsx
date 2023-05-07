@@ -31,11 +31,15 @@ export default function Home(){
         </View>
             
             <View style={global.row}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => {
+                    nav.navigate('error404')
+                }}>
                     <Ionicons name="notifications-outline" size={24} color="#0C1523" style={header.spaceicon}/>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => {
+                    nav.navigate('error404')
+                }}>
                     <Ionicons name="apps-outline" size={24} color="#0C1523" style={header.spaceicon}/>
                 </TouchableOpacity>
             </View>
@@ -61,19 +65,25 @@ export default function Home(){
 
         {/* Button Ver Todas */}            
             <ButtonCy name='Minhas proximas viagens.'
-                namebutton='Ver' img={cy1}
+                namebutton='Ver' img={cy1} nav={() => {
+                    nav.navigate('error404')
+                }}
             />
         {/* Button Ver Todas End*/}
         
         {/* Button Checkar */}
             <ButtonCy name='Historico de viagens.'
-                namebutton='Ver todas' img={cy2}
+                namebutton='Ver todas' img={cy2} nav={() => {
+                    nav.navigate('error404')
+                }}
             />
         {/* End Button Checkar */}
 
         {/* Button Help */}
         <ButtonCy name='Precisa de ajuda?'
-            namebutton='Fale com Cy' img={cy3}
+            namebutton='Fale com Cy' img={cy3} nav={() => {
+                nav.navigate('error404')
+            }}
         />
         {/* End Button Help */}
 

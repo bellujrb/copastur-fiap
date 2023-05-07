@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Image, Text} from 'react-native'
-import cy1 from '../../assets/images/cy1.png';
 import ButtonHome from "./button";
 import { buttonCy } from "../../style/global/style";
 
@@ -8,6 +7,7 @@ interface Props {
     name: string;
     namebutton: string;
     img?: any;
+    nav: any;
 }
 
 export default function ButtonCy(props: Props){
@@ -20,9 +20,7 @@ export default function ButtonCy(props: Props){
 
             <View>
                 <Text style={buttonCy.textbutton}>{props.name}</Text>
-                <ButtonHome name={props.namebutton} destiny={() => {
-                    alert("In development")
-                }}/>
+                <ButtonHome name={props.namebutton} destiny={props.nav}/>
             </View>
         </View>
     )
