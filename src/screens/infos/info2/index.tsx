@@ -68,16 +68,6 @@ export default function InfoTwo(){
                         name='Quanto pretende gastar?'
                         placeholder='Digite aproximadamente quanto pretende.'
                     />
-
-                    <Input
-                        name='??'
-                        placeholder='???'
-                    />
-
-                    <Input
-                        name='??'
-                        placeholder='???'
-                    />
                 </View>
                 { /* Input */}
 

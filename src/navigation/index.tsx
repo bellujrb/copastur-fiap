@@ -10,6 +10,9 @@ import InfoTwo from "../screens/infos/info2";
 import Error from "../screens/error404/Error";
 import NextTravel from "../screens/nexttravel";
 import FlatTravel from "../screens/flattravel";
+import CyMain from "../screens/cy/main";
+import CyChat from "../screens/cy/chat";
+import { AppProvider } from "../context/context";
 
 export type RootStackParams = {
     welcome: undefined;
@@ -21,6 +24,8 @@ export type RootStackParams = {
     error404: undefined;
     nexttravel: undefined;
     flattravel: undefined;
+    cymain: undefined;
+    cychat: undefined;
 }
 
 const Stack = createStackNavigator<RootStackParams>();
@@ -28,6 +33,7 @@ const Stack = createStackNavigator<RootStackParams>();
 export default function Screens(){
 
     return (
+        <AppProvider>
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen
@@ -101,7 +107,23 @@ export default function Screens(){
                         headerShown: false
                     }}
                 />
+                <Stack.Screen
+                    name="cymain"
+                    component={CyMain}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <Stack.Screen
+                    name="cychat"
+                    component={CyChat}
+                    options={{
+                        headerShown: false
+                    }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
+        </AppProvider>
     )
 }

@@ -79,7 +79,7 @@ export default function NextTravel(){
                     alignItems: 'center'
                 }}>
                     <ButtonCy name='Precisa de ajuda?' namebutton='Falar com a Cy' img={imgcy} nav={() => {
-                        
+                        nav.navigate('cymain')
                     }}/>
                     <ButtonCy name='Seu plano de viagem' namebutton='Acesse' img={imgcy} nav={() => {
                         nav.navigate('flattravel')

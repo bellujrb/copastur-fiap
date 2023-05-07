@@ -1,12 +1,44 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { View, Text } from 'react-native';
 import { register } from '../../../style/auth/style';
 import { Input } from '../../../components/global/input';
-import { global, input } from '../../../style/global/style';
+import { global } from '../../../style/global/style';
 import Button from '../../../components/global/button';
 import { confirmregister } from '../../../constants/string';
+import firebase from '../../../services/firebase';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { useNavigation } from '@react-navigation/native';
+import { RootStackParams } from '../../../navigation';
+import { AppContext } from '../../../context/context';
 
 export default function Register(){
+
+    const context = useContext(AppContext)
+
+    const nav = useNavigation<StackNavigationProp<RootStackParams>>()
+
+    useEffect(() => {
+
+    }, [context])
+
+    async function CreateAccount() {
+        try {
+            await firebase
+                .auth()
+                .createUserWithEmailAndPassword(context?.email || '', context?.password || '')
+        } catch (err: any) {
+            const errors: Record<string, () => void> = {
+                'auth/weak-password': () =>
+                console.log('Sua senha deve ter pelo menos 6 caracteres'),
+                'auth/invalid-email': () => console.log('Email do usuario incorreto')
+            }
+            !errors[err.code] &&
+            console.log(
+                `Algo deu errado, consulte o desenvolvedor do projeto ERROR: ${err}`
+            )
+            errors[err.code]()
+        }
+        }
 
     return (
         <View>
@@ -22,28 +54,28 @@ export default function Register(){
                 <Input
                     name='Nome'
                     placeholder='Digite seu primeiro nome'
-                />
+                    value={context?.name}/>
 
                 <Input
                     name='Sobrenome'
                     placeholder='Digite seu sobrenome'
-                />
+                    value={context?.surname}/>
 
                 <Input
                     name='E-mail'
                     placeholder='Digite seu e-mail'
-                />
+                    value={context?.email}/>
 
                 <Input
                     name='Senha'
                     placeholder='Digite sua senha'
-                />
+                    value={context?.password}/>
 
                 { /* End Input Name  */}
 
                 { /* Button Register */ }
                     <Button nameButton={confirmregister} destiny={() => {
-                        alert('Cadastrado')
+                        CreateAccount()
                     }}/>
                 { /* End Button Register */ }
 

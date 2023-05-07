@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import React, { useContext, useEffect } from 'react';
+import { View, Text  } from 'react-native';
 import { register } from '../../../style/auth/style';
 import { Input } from '../../../components/global/input';
 import { global } from '../../../style/global/style';
@@ -8,8 +8,29 @@ import { loginbutton } from '../../../constants/string';
 import { RootStackParams } from '../../../navigation';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
+import firebase from '../../../services/firebase';
+import { AppContext } from '../../../context/context';
+
 
 export default function Login(){
+
+    const context = useContext(AppContext)
+
+    useEffect(() => {
+
+    }, [context])
+
+    async function LoginAccount() {
+        await firebase.auth().signInWithEmailAndPassword(context?.email, context?.password)
+        .then( (value:any) => {
+            context?.setId(value.user.uid);
+            nav.navigate('home')
+            console.log(value.user.uid)
+        })
+        .catch( (err:string) => {
+            console.log(err)
+        })
+    }
 
     const nav = useNavigation<StackNavigationProp<RootStackParams>>();
 
@@ -26,12 +47,12 @@ export default function Login(){
 
                 <Input
                     name='E-mail'
-                    placeholder='Digite seu primeiro nome'
+                    placeholder='Digite seu -email'
                 />
 
                 <Input
                     name='Senha'
-                    placeholder='Digite seu sobrenome'
+                    placeholder='Digite sua senha'
                 />
 
                 { /* End Input Name  */}

@@ -82,7 +82,7 @@ export default function Home(){
         {/* Button Help */}
         <ButtonCy name='Precisa de ajuda?'
             namebutton='Fale com Cy' img={cy3} nav={() => {
-                nav.navigate('error404')
+                nav.navigate('cymain')
             }}
         />
         {/* End Button Help */}

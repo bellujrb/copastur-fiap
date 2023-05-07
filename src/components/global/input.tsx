@@ -5,6 +5,9 @@ import { input } from "../../style/global/style";
 interface Props {
     name: string;
     placeholder: string;
+    value?: any;
+    data?: any;
+    secure?: boolean;
 }
 
 export function Input(props: Props){
