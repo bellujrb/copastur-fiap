@@ -6,7 +6,7 @@ export const header = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: 'row',
-        padding: 60,
+        padding: 30,
     },
     name:{
         fontFamily: 'General Sans',
@@ -35,10 +35,10 @@ export const homebutton = StyleSheet.create({
     },
     hbutton1:{
         padding: 10,
-        width: 329,
+        width: 349,
         height: 137,
         
-        backgroundColor: '#9DCEFF',
+        backgroundColor: 'rgba(146, 163, 253, 0.8)',
 
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -48,10 +48,10 @@ export const homebutton = StyleSheet.create({
     },
     title:{
         fontFamily: 'General Sans',
-        fontWeight: '500',
+        fontWeight: '700',
         fontSize: 15.5,
 
-        color: '#1D1617'
+        color: '#425884',
     },
     minibutton:{
         marginTop: 15,
@@ -59,7 +59,7 @@ export const homebutton = StyleSheet.create({
         width: 142.04,
         height: 25,
             
-        backgroundColor: 'rgba(0, 128, 255, 0.49)',
+        backgroundColor: '#8094E1',
         borderRadius: 50,
             
         justifyContent: 'center',

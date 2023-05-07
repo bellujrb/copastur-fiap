@@ -1,8 +1,39 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
+export const header = StyleSheet.create({
+    top:{
+        marginTop: 30,
+
+        width: '80%',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexDirection: 'row',
+    },
+    name:{
+        fontFamily: 'General Sans',
+        fontWeight: '400',
+        fontSize: 12,
+
+        color: '#A4A4A5'
+    },
+    subtitle:{
+        fontFamily: 'General Sans',
+        fontWeight: '700',
+        fontSize: 20,
+
+        color: '#425884'
+    },
+    spaceicon:{
+        marginTop: 10,
+        marginLeft: 10
+    }
+})
+
 export const info = StyleSheet.create({
     titlemain:{
+        marginLeft: 20,
+
         fontFamily: 'General Sans',
         fontWeight: '700',
         fontSize: 20,
@@ -12,7 +43,8 @@ export const info = StyleSheet.create({
         color: '#425884'
     },
     subtitlemain:{
-        marginTop: 10,
+        marginLeft: 20,
+        marginTop: 2,
 
         fontFamily: 'General Sans',
         fontWeight: '400',
@@ -28,10 +60,27 @@ export const info = StyleSheet.create({
     marginright:{
         marginRight: 30
     },
+    organizenext:{
+        marginTop: 60,
+
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
     imgnext:{
-        width: 100,
-        height: 100,
-    }
+        width: 80,
+        height: 80,
+    },
+    textnext:{
+        marginTop: 5,
+                        
+        fontFamily: 'Poppins',
+        fontWeight: '600',
+        fontSize: 12,
+
+        letterSpacing: 0.3,
+
+        color: '#3D3D3D'
+    },
 })
 
 export const inputS = StyleSheet.create({
@@ -41,7 +90,10 @@ export const inputS = StyleSheet.create({
         alignItems: 'center'
     },
     spaceinputs:{
-        margin: 10,
+        marginTop: 10,
+        
+        marginLeft: 10,
+        marginRight: 10,
     },
     textinput:{
         fontFamily: 'Poppins',

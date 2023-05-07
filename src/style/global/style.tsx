@@ -12,7 +12,8 @@ export const global = StyleSheet.create({
 
 export const input = StyleSheet.create({
     spaceinputs:{
-        margin: 4
+        marginTop: 10,
+        marginLeft: 15,
     },
     textinput:{
         fontFamily: 'Poppins',
@@ -27,7 +28,7 @@ export const input = StyleSheet.create({
         marginLeft: 2
     },
     input:{
-        width: 334,
+        width: 312,
         height: 50,
         backgroundColor: '#FFFFFF',
         borderRadius: 15,
@@ -39,5 +40,34 @@ export const input = StyleSheet.create({
         fontSize: 14,
 
         padding: 10,
+    },
+})
+
+export const buttonCy = StyleSheet.create({
+    container:{
+        marginTop: 40,
+
+        width: 349,
+        height: 90,
+        borderRadius: 22,
+
+        backgroundColor: 'rgba(146, 163, 253, 0.8)',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center'
+    },
+    width:{
+        width: '40%'
+    },
+    img:{
+        width: '100%',
+        height: '100%',
+    },
+    textbutton:{
+        fontFamily: 'General Sans',
+        fontWeight: '700',
+        fontSize: 12 ,
+
+        color: '#1D1617',
     },
 })

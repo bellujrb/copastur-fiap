@@ -15,12 +15,12 @@ export default function Button(props: Props){
 
     const button = StyleSheet.create({
         rectangle:{
-            marginTop: 10,
+            marginTop: 20,
     
             width: widthAnimated,
             height: 60,
     
-            backgroundColor: '#9DCEFF',
+            backgroundColor: 'rgba(146, 163, 253, 0.8)',
             borderRadius: 99,
     
             justifyContent: 'center',

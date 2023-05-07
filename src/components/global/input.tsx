@@ -10,7 +10,10 @@ interface Props {
 export function Input(props: Props){
     
     return (
-        <View>
+        <View style={{
+            justifyContent: 'center',
+            alignItems: 'center'
+        }}>
             <View style={input.spaceinputs}>
                 <Text style={input.textinput}>{props.name}</Text>
                 

@@ -6,6 +6,8 @@ interface Props {
     name: string;
     placeholder: string;
     type: string;
+    keyboard?: any;
+    quantity?: number;
 }
 
 export function InputSpecial (props: Props){
@@ -17,7 +19,9 @@ export function InputSpecial (props: Props){
                 
                 <TextInput
                 placeholder={props.placeholder}
-                style={inputS.input}/>
+                style={inputS.input}
+                keyboardType={props.keyboard}
+                maxLength={props.quantity}/>
             </View>
 
             <View style={inputS.cubetype}>
