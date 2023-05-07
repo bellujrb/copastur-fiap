@@ -48,18 +48,20 @@ export default function Login(){
                 <Input
                     name='E-mail'
                     placeholder='Digite seu -email'
+                    value={context?.email}
                 />
 
                 <Input
                     name='Senha'
                     placeholder='Digite sua senha'
+                    value={context?.password}
                 />
 
                 { /* End Input Name  */}
 
                 { /* Button Register */ }
                     <Button nameButton={loginbutton} destiny={() => {
-                        nav.navigate('home')
+                        LoginAccount()
                     }}/>
                 { /* End Button Register */ }
 
