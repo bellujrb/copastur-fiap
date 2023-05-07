@@ -16,7 +16,6 @@ export const call = StyleSheet.create({
         height: '100%'
     },
     text:{
-        fontFamily: 'Poppins',
         fontWeight: '500',
         fontSize: 12,
 
@@ -27,7 +26,6 @@ export const call = StyleSheet.create({
         justifyContent: 'space-between',
     },
     subtitle:{
-        fontFamily: 'Poppins',
         fontWeight: '400',
         fontSize: 12,
 
@@ -47,7 +45,6 @@ export const message = StyleSheet.create({
         backgroundColor: 'rgba(151, 151, 151, 0.1)',
     },
     title:{
-        fontFamily: 'Poppins',
         fontWeight: '400',
         fontSize: 12,
 
@@ -64,7 +61,6 @@ export const message = StyleSheet.create({
         backgroundColor: 'rgba(151, 151, 151, 0.1)',
     },
     subtitle:{
-        fontFamily: 'Poppins',
         fontWeight: '400',
         fontSize: 12,
 

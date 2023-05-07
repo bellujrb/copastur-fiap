@@ -17,7 +17,6 @@ export const welcome = StyleSheet.create({
     },
     normaltitle:{
         textAlign: 'left',
-        fontFamily: 'General Sans',
         fontWeight: '300',
         fontSize: 25,
 
@@ -25,7 +24,7 @@ export const welcome = StyleSheet.create({
         color: '#425884'
     },
     ultratitle:{
-        fontFamily: 'General Sans',
+
         fontWeight: '600',
         fontSize: 48,
 

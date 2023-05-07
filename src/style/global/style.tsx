@@ -16,7 +16,6 @@ export const input = StyleSheet.create({
         marginLeft: 15,
     },
     textinput:{
-        fontFamily: 'Poppins',
 
         fontWeight: '300',
         fontSize: 12,
@@ -35,7 +34,6 @@ export const input = StyleSheet.create({
         borderColor: '#DFE2E5',
         borderWidth: 1,
 
-        fontFamily: 'Poppins',
         fontWeight: '400',
         fontSize: 14,
 
@@ -64,7 +62,6 @@ export const buttonCy = StyleSheet.create({
         height: '100%',
     },
     textbutton:{
-        fontFamily: 'General Sans',
         fontWeight: '700',
         fontSize: 12 ,
 
@@ -97,15 +94,12 @@ export const minihelp = StyleSheet.create({
     text:{
         marginLeft: 10,
 
-        fontFamily: 'Poppins',
         fontWeight: '400',
         fontSize: 12,
 
         color: '#7B6F72'
     },
     textbutton:{
-        fontFamily: 'Poppins',
-
         fontWeight: '700',
         fontSize: 10,
 

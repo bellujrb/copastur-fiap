@@ -27,7 +27,6 @@ export default function Button(props: Props){
             alignItems: 'center'
         },
         text:{
-            fontFamily: 'General Sans',
             fontWeight: '700',
             fontSize: 16,
     

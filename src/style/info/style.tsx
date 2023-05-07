@@ -11,14 +11,12 @@ export const header = StyleSheet.create({
         flexDirection: 'row',
     },
     name:{
-        fontFamily: 'General Sans',
         fontWeight: '400',
         fontSize: 12,
 
         color: '#A4A4A5'
     },
     subtitle:{
-        fontFamily: 'General Sans',
         fontWeight: '700',
         fontSize: 20,
 
@@ -34,7 +32,6 @@ export const info = StyleSheet.create({
     titlemain:{
         marginLeft: 20,
 
-        fontFamily: 'General Sans',
         fontWeight: '700',
         fontSize: 20,
 
@@ -46,7 +43,6 @@ export const info = StyleSheet.create({
         marginLeft: 20,
         marginTop: 2,
 
-        fontFamily: 'General Sans',
         fontWeight: '400',
         fontSize: 12,
 
@@ -73,7 +69,6 @@ export const info = StyleSheet.create({
     textnext:{
         marginTop: 5,
                         
-        fontFamily: 'Poppins',
         fontWeight: '600',
         fontSize: 12,
 
@@ -96,7 +91,6 @@ export const inputS = StyleSheet.create({
         marginRight: 10,
     },
     textinput:{
-        fontFamily: 'Poppins',
 
         fontWeight: '300',
         fontSize: 12,
@@ -134,7 +128,6 @@ export const inputS = StyleSheet.create({
         alignItems: 'center'
     },
     cubetext:{
-        fontFamily: 'General Sans',
         fontWeight: '500',
         fontSize: 12,
 

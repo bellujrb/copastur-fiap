@@ -9,14 +9,12 @@ export const header = StyleSheet.create({
         padding: 30,
     },
     name:{
-        fontFamily: 'General Sans',
         fontWeight: '400',
         fontSize: 12,
 
         color: '#A4A4A5'
     },
     subtitle:{
-        fontFamily: 'General Sans',
         fontWeight: '700',
         fontSize: 20,
 
@@ -47,7 +45,6 @@ export const homebutton = StyleSheet.create({
         borderRadius: 22
     },
     title:{
-        fontFamily: 'General Sans',
         fontWeight: '700',
         fontSize: 15.5,
 
