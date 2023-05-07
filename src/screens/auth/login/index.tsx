@@ -64,7 +64,7 @@ export default function Login(){
 
                 { /* Button Register */ }
                     <Button nameButton={loginbutton} destiny={() => {
-                        LoginAccount()
+                        nav.navigate('home')
                     }}/>
                 { /* End Button Register */ }
 

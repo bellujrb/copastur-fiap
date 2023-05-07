@@ -80,7 +80,7 @@ export default function Register(){
 
                 { /* Button Register */ }
                     <Button nameButton={confirmregister} destiny={() => {
-                        CreateAccount()
+                        nav.navigate('home')
                     }}/>
                 { /* End Button Register */ }
 
