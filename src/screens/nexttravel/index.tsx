@@ -1,22 +1,25 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, SafeAreaView, Image } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { header } from '../../style/info/style';
-import { global } from '../../style/global/style';
-import { info } from '../../style/info/style';
+import buttomimg from '../../assets/images/button1.png';
 import { useNavigation } from '@react-navigation/native';
 import { RootStackParams } from '../../navigation';
 import { StackNavigationProp } from '@react-navigation/stack';
+import { header } from '../../style/header/style';
+import { global } from '../../style/global/style';
+import { info } from '../../style/info/style';
+import { Input } from '../../components/global/input';
 import ButtonCy from '../../components/home/buttonCy';
-import errorimg from '../../assets/images/error.png';
+import imgcy from '../../assets/images/cy1.png';
 
 
-export default function Error(){
+export default function NextTravel(){
 
     const nav = useNavigation<StackNavigationProp<RootStackParams>>();
     
     return (
         <SafeAreaView style={{
+            justifyContent: 'space-between',
             height: '65%',
         }}>
 
@@ -48,21 +51,42 @@ export default function Error(){
             {/* Title Main */}
 
             <View>
-
-                <Text style={info.titlemain}>Error 404</Text>
-                <View style={info.margintop}/>
+                <Text style={info.titlemain}>Minha Proxima Viagem</Text>
+                <Text style={info.subtitlemain}>Informacoes da viagem</Text>
+            <View style={info.margintop}/>
 
             {/* Title Main End */}
 
-            <View style={{
-                justifyContent: 'center',
-                alignItems: 'center'
-            }}>
-                <ButtonCy name='Page em desenv.' namebutton='Inicio' img={errorimg}
-                nav={()=> {
-                    nav.navigate('home')
-                }}/>
-            </View>
+                { /* Input */ }
+                <View style={info.marginright}>
+
+                    <Input name='Origem' placeholder='Digite sua origem'/>
+                    <Input name='Destino' placeholder='Digite seu destino'/>
+
+                    <View style={info.margintop}/>
+                    <Text style={info.titlemain}>Datas:</Text>
+
+                    <Input name='Partida' placeholder='Digite seua partida'/>
+                    <Input name='Retorno' placeholder='Digite seu retorno'/>
+                </View>
+
+                
+                { /* Input End */ }
+
+                { /* Botao Next */}
+                <View style={{
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                }}>
+                    <ButtonCy name='Precisa de ajuda?' namebutton='Falar com a Cy' img={imgcy} nav={() => {
+                        
+                    }}/>
+                    <ButtonCy name='Seu plano de viagem' namebutton='Acesse' img={imgcy} nav={() => {
+                        nav.navigate('flattravel')
+                    }}/>
+                </View>
+                { /* Botao Next End */}
+
 
             </View>
         </SafeAreaView>

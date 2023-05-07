@@ -8,6 +8,8 @@ import Home from "../screens/home";
 import Info from "../screens/infos/info1";
 import InfoTwo from "../screens/infos/info2";
 import Error from "../screens/error404/Error";
+import NextTravel from "../screens/nexttravel";
+import FlatTravel from "../screens/flattravel";
 
 export type RootStackParams = {
     welcome: undefined;
@@ -17,6 +19,8 @@ export type RootStackParams = {
     info1: undefined;
     info2: undefined;
     error404: undefined;
+    nexttravel: undefined;
+    flattravel: undefined;
 }
 
 const Stack = createStackNavigator<RootStackParams>();
@@ -77,6 +81,22 @@ export default function Screens(){
                 <Stack.Screen
                     name="error404"
                     component={Error}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <Stack.Screen
+                    name="nexttravel"
+                    component={NextTravel}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <Stack.Screen
+                    name="flattravel"
+                    component={FlatTravel}
                     options={{
                         headerShown: false
                     }}

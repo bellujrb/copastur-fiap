@@ -1,17 +1,20 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, SafeAreaView, Image } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { header } from '../../style/info/style';
-import { global } from '../../style/global/style';
-import { info } from '../../style/info/style';
+import buttomimg from '../../assets/images/button1.png';
 import { useNavigation } from '@react-navigation/native';
 import { RootStackParams } from '../../navigation';
 import { StackNavigationProp } from '@react-navigation/stack';
+import { header } from '../../style/header/style';
+import { global } from '../../style/global/style';
+import { info } from '../../style/info/style';
+import { Input } from '../../components/global/input';
 import ButtonCy from '../../components/home/buttonCy';
-import errorimg from '../../assets/images/error.png';
+import imgcy from '../../assets/images/cy1.png';
+import MiniHelp from '../../components/global/minihelp';
 
 
-export default function Error(){
+export default function FlatTravel(){
 
     const nav = useNavigation<StackNavigationProp<RootStackParams>>();
     
@@ -48,22 +51,23 @@ export default function Error(){
             {/* Title Main */}
 
             <View>
-
-                <Text style={info.titlemain}>Error 404</Text>
-                <View style={info.margintop}/>
+                <Text style={info.titlemain}>Plano de Viagem</Text>
+            <View style={info.margintop}/>
 
             {/* Title Main End */}
-
             <View style={{
                 justifyContent: 'center',
                 alignItems: 'center'
-            }}>
-                <ButtonCy name='Page em desenv.' namebutton='Inicio' img={errorimg}
-                nav={()=> {
-                    nav.navigate('home')
-                }}/>
-            </View>
+            }}>  
+                <MiniHelp horario='09h00 - 10h00' texthelp='Me ajuda Cy'/>
+                <MiniHelp horario='10h00 - 11h00' texthelp='Me ajuda Cy p/ almoco'/>
+                <MiniHelp horario='12h00 - 14h00' texthelp='Me ajuda Cy p/ passeio'/>
+                <MiniHelp horario='19h00 - 23h00' texthelp='Me ajuda Cy p/ praia'/>
 
+                <ButtonCy name='Precisa de ajuda?' namebutton='Fale com a Cy' img={imgcy} nav={() => {
+                        
+                }}/>
+                </View>
             </View>
         </SafeAreaView>
     )

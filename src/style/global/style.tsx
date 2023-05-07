@@ -71,3 +71,44 @@ export const buttonCy = StyleSheet.create({
         color: '#1D1617',
     },
 })
+
+export const minihelp = StyleSheet.create({
+    container:{
+        marginTop: 10,
+        width: 315,
+        height: 36, 
+
+        backgroundColor: 'rgba(146, 163, 253, 0.8)',
+        borderRadius: 16,
+        justifyContent: 'space-around',
+        alignItems: 'center',
+
+        flexDirection: 'row'
+    },
+    organize:{
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        flexDirection: 'row'
+    },
+    img:{
+        width: 22,
+        height: 22
+    },
+    text:{
+        marginLeft: 10,
+
+        fontFamily: 'Poppins',
+        fontWeight: '400',
+        fontSize: 12,
+
+        color: '#7B6F72'
+    },
+    textbutton:{
+        fontFamily: 'Poppins',
+
+        fontWeight: '700',
+        fontSize: 10,
+
+        color: '#425884'
+    }
+})

@@ -66,7 +66,7 @@ export default function Home(){
         {/* Button Ver Todas */}            
             <ButtonCy name='Minhas proximas viagens.'
                 namebutton='Ver' img={cy1} nav={() => {
-                    nav.navigate('error404')
+                    nav.navigate('nexttravel')
                 }}
             />
         {/* Button Ver Todas End*/}
