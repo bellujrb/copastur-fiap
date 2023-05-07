@@ -54,23 +54,27 @@ export default function Register(){
                 <Input
                     name='Nome'
                     placeholder='Digite seu primeiro nome'
-                    value={context?.name}/>
+                    value={context?.name}
+                    data={context?.setName}/>
 
                 <Input
                     name='Sobrenome'
                     placeholder='Digite seu sobrenome'
-                    value={context?.surname}/>
+                    value={context?.surname}
+                    data={context?.setSurname}/>
 
                 <Input
                     name='E-mail'
                     placeholder='Digite seu e-mail'
-                    value={context?.email}/>
+                    value={context?.email}
+                    data={context?.setEmail}/>
 
                 <Input
                     name='Senha'
                     placeholder='Digite sua senha'
                     value={context?.password}
-                    secure={true}/>
+                    secure={true}
+                    data={context?.setPassword}/>
 
                 { /* End Input Name  */}
 

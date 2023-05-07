@@ -49,6 +49,7 @@ export default function Login(){
                     name='E-mail'
                     placeholder='Digite seu -email'
                     value={context?.email}
+                    data={context?.setEmail}
                 />
 
                 <Input
@@ -56,6 +57,7 @@ export default function Login(){
                     placeholder='Digite sua senha'
                     value={context?.password}
                     secure={true}
+                    data={context?.setPassword}
                 />
 
                 { /* End Input Name  */}

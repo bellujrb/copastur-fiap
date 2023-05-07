@@ -24,6 +24,7 @@ export function Input(props: Props){
                 placeholder={props.placeholder}
                 style={input.input}
                 value={props.value}
+                onChangeText={value => props.data(value)}
                 secureTextEntry={props.secure}/>
             </View>
         </View>

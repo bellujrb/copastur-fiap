@@ -7,8 +7,8 @@ export const AppContext = createContext<AppContextInterface | null>(null)
 
 export const AppProvider = ({ children }: Props) => {
 
-    const [name, setName] = useState('Unkdown')
-    const [surname, setSurname] = useState('Unkdown')
+    const [name, setName] = useState('')
+    const [surname, setSurname] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
     const [id, setId] = useState('');
