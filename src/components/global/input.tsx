@@ -22,7 +22,9 @@ export function Input(props: Props){
                 
                 <TextInput
                 placeholder={props.placeholder}
-                style={input.input}/>
+                style={input.input}
+                value={props.value}
+                secureTextEntry={props.secure}/>
             </View>
         </View>
     )
