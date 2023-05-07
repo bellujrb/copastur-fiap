@@ -69,7 +69,8 @@ export default function Register(){
                 <Input
                     name='Senha'
                     placeholder='Digite sua senha'
-                    value={context?.password}/>
+                    value={context?.password}
+                    secure={true}/>
 
                 { /* End Input Name  */}
 

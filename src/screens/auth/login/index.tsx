@@ -55,6 +55,7 @@ export default function Login(){
                     name='Senha'
                     placeholder='Digite sua senha'
                     value={context?.password}
+                    secure={true}
                 />
 
                 { /* End Input Name  */}
